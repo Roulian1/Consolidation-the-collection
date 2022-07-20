@@ -90,3 +90,32 @@ const collection = [
         releaseYear : 2019,
     },
 ];
+
+const container = document.getElementById('container');
+
+collection.forEach((result, idx) => {
+  // Create card element
+
+  // Construct card content
+  const content = `
+    <div class="card">
+
+    <div >
+      <div class="card-body">
+
+        <img src="${result.picture}" alt="">
+        <h3> Genre: ${result.genre}</h3>
+        <h2>Tiltle: ${result.title}</h2>
+        <p>Author: ${result.author}</p>
+        <p>Year of release: ${result.releaseYear}</p>
+        <p>Status: ${result.status}</p>
+        <h4>Chapters: ${result.chapters}</h4>
+        ...
+      </div>
+    </div>
+  </div>
+  `;
+
+  // Append newyly created card element to the container
+  container.innerHTML += content;
+})
