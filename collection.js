@@ -50,7 +50,7 @@ const collection = [
         chapters : 181,
         status : "completed",
         picture : "https://cdn.novelupdates.com/images/2021/12/Quickly-Wear-the-Face-of-the-Devil_1640588524.jpg",
-        genre : ["Action", "Adult", "Adventure", "Comedy", "Drama", "Fantasy", "Romance", "School", "Life", "Sci-fi", "Yaoi"],
+        genre : ["Action", "Adult", "Adventure", "Comedy", "Drama", "Fantasy", "Romance", "School-Life", "Sci-fi", "Yaoi"],
         releaseYear : 2015,
     },
     {
@@ -93,27 +93,25 @@ const collection = [
 
 const container = document.getElementById('container');
 
-collection.forEach((result, idx) => {
-  // Create card element
+collection.forEach((result) => {
 
   // Construct card content
   const content = `
-    <div class="card">
-
-    <div >
       <div class="card-body">
 
-        <img src="${result.picture}" alt="">
+        <img class="cover" src="${result.picture}" alt="">
         <h3> Genre: ${result.genre}</h3>
         <h2>Tiltle: ${result.title}</h2>
         <p>Author: ${result.author}</p>
         <p>Year of release: ${result.releaseYear}</p>
         <p>Status: ${result.status}</p>
         <h4>Chapters: ${result.chapters}</h4>
-        ...
+        <hr size:"10">
+        <a href="https://www.novelupdates.com/viewlist/3404/">
+        <img class="footer" src="https://www.bing.com/th?id=ODLS.c406d731-c2a8-4480-8d55-5643ba57d57e&w=32&h=32&o=6&pid=13.1" alt="">
+        </a>
+
       </div>
-    </div>
-  </div>
   `;
 
   // Append newyly created card element to the container
